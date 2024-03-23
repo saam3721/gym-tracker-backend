@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: gym-tracker-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/local-gym-tracker
+    username: localuser
+    password: localpassword
+  jpa:
+    hibernate:
+      ddl-auto: create-drop

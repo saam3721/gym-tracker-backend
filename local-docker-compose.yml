@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  gym-tracker-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/local-gym-tracker
+      - SPRING_DATASOURCE_USERNAME=localpostgres
+      - SPRING_DATASOURCE_PASSWORD=localpassword
+  postgres-db:
+    image: postgres:alpine3.19
+    environment:
+      - POSTGRES_DB=local-gym-tracker
+      - POSTGRES_USER=localuser
+      - POSTGRES_PASSWORD=localpassword
+    ports:
+      - "5432:5432"
