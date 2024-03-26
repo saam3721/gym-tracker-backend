@@ -2,6 +2,7 @@ package com.saam3721.gymtrackerbackend.service.entities;
 
 import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Table(name = "equipment")
@@ -15,6 +16,7 @@ public class Equipment {
     @Column(name = "equipment_name")
     private String equipmentName;
 
-    @Column(name = "exercise_id")
-    private UUID exerciseId;
+    @OneToMany(mappedBy = "equipment")
+    private List<Workout> workouts;
+
 }

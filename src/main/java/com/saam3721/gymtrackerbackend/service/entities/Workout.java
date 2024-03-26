@@ -1,9 +1,6 @@
 package com.saam3721.gymtrackerbackend.service.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -16,12 +13,24 @@ public class Workout {
     @Column(name = "workout_id")
     private UUID workoutId;
 
-    @Column(name = "user_id")
-    private UUID userId; // TODO: Use join instead of column in this table
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private ApplicationUser applicationUser;
 
-    @Column(name = "workout_name")
-    private UUID exerciseId; // TODO: Use join instead of column in this table
+    @ManyToOne
+    @JoinColumn(name = "equipment_id")
+    private Equipment equipment;
+
+    @Column(name = "repetitions")
+    private int repetitions;
+
+    @Column(name = "sets")
+    private int sets;
+
+    @Column(name = "weight")
+    private float weight;
 
     @Column(name = "workout_date")
     private Instant workoutDate;
+
 }

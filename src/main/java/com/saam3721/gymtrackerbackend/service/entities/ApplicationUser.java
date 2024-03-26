@@ -1,10 +1,8 @@
 package com.saam3721.gymtrackerbackend.service.entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
+import java.util.List;
 import java.util.UUID;
 
 @Table(name = "application_users")
@@ -20,4 +18,8 @@ public class ApplicationUser {
 
     @Column(name = "password")
     private String password;
+
+    @OneToMany(mappedBy = "applicationUser")
+    private List<Workout> workouts;
+
 }
