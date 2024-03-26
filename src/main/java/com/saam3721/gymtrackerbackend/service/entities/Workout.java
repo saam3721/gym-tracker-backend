@@ -1,12 +1,14 @@
 package com.saam3721.gymtrackerbackend.service.entities;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.time.Instant;
 import java.util.UUID;
 
 @Table(name = "workouts")
 @Entity
+@Data
 public class Workout {
 
     @Id
