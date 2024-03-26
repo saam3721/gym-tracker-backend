@@ -10,8 +10,9 @@ import java.util.UUID;
 public class ApplicationUser {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "user_id")
-    private UUID UserId;
+    private UUID userId;
 
     @Column(name = "username")
     private String username;

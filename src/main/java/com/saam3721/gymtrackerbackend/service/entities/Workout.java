@@ -10,6 +10,7 @@ import java.util.UUID;
 public class Workout {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "workout_id")
     private UUID workoutId;
 

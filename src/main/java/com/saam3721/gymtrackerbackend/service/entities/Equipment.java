@@ -10,6 +10,7 @@ import java.util.UUID;
 public class Equipment {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "equipment_id")
     private UUID equipmentId;
 
