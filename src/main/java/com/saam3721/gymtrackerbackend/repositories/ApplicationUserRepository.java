@@ -1,6 +1,6 @@
-package com.saam3721.gymtrackerbackend.service.repositories;
+package com.saam3721.gymtrackerbackend.repositories;
 
-import com.saam3721.gymtrackerbackend.service.entities.ApplicationUser;
+import com.saam3721.gymtrackerbackend.entities.ApplicationUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,7 +1,7 @@
-package com.saam3721.gymtrackerbackend.service.controllers;
+package com.saam3721.gymtrackerbackend.controllers;
 
-import com.saam3721.gymtrackerbackend.service.entities.ApplicationUser;
-import com.saam3721.gymtrackerbackend.service.repositories.ApplicationUserRepository;
+import com.saam3721.gymtrackerbackend.entities.ApplicationUser;
+import com.saam3721.gymtrackerbackend.repositories.ApplicationUserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

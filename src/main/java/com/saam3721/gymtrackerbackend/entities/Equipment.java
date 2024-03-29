@@ -1,4 +1,4 @@
-package com.saam3721.gymtrackerbackend.service.entities;
+package com.saam3721.gymtrackerbackend.entities;
 
 import jakarta.persistence.*;
 import lombok.Data;
