@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: gym-tracker-backend
+
+jwt:
+  secret-key: ${JWT_SECRET_KEY:secret-key}
