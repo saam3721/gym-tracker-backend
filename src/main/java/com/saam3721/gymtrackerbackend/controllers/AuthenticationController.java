@@ -1,5 +1,9 @@
-package com.saam3721.gymtrackerbackend.auth;
+package com.saam3721.gymtrackerbackend.controllers;
 
+import com.saam3721.gymtrackerbackend.entities.auth.AuthenticationRequest;
+import com.saam3721.gymtrackerbackend.entities.auth.AuthenticationResponse;
+import com.saam3721.gymtrackerbackend.service.AuthenticationService;
+import com.saam3721.gymtrackerbackend.entities.auth.RegisterRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

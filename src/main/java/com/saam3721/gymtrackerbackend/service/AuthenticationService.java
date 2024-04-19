@@ -1,7 +1,10 @@
-package com.saam3721.gymtrackerbackend.auth;
+package com.saam3721.gymtrackerbackend.service;
 
 import com.saam3721.gymtrackerbackend.entities.ApplicationUser;
 import com.saam3721.gymtrackerbackend.entities.Role;
+import com.saam3721.gymtrackerbackend.entities.auth.AuthenticationRequest;
+import com.saam3721.gymtrackerbackend.entities.auth.AuthenticationResponse;
+import com.saam3721.gymtrackerbackend.entities.auth.RegisterRequest;
 import com.saam3721.gymtrackerbackend.repositories.ApplicationUserRepository;
 import com.saam3721.gymtrackerbackend.security.jwt.JwtService;
 import lombok.RequiredArgsConstructor;

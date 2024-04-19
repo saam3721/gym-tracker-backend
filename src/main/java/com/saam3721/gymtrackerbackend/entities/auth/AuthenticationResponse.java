@@ -1,4 +1,4 @@
-package com.saam3721.gymtrackerbackend.auth;
+package com.saam3721.gymtrackerbackend.entities.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,10 +9,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequest {
+public class AuthenticationResponse {
 
-    private String username;
-
-    private String password;
+    private String token;
 
 }
