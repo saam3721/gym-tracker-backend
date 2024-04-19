@@ -1,5 +1,6 @@
 package com.saam3721.gymtrackerbackend.entities;
 
+import com.saam3721.gymtrackerbackend.entities.equipment.Equipment;
 import jakarta.persistence.*;
 import lombok.Data;
 

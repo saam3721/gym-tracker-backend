@@ -1,23 +1,27 @@
-package com.saam3721.gymtrackerbackend.entities;
+package com.saam3721.gymtrackerbackend.entities.equipment;
 
+import com.saam3721.gymtrackerbackend.entities.Workout;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
-import java.util.UUID;
 
 @Table(name = "equipment")
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Equipment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    @Column(name = "equipment_id")
-    private UUID equipmentId;
-
     @Column(name = "equipment_name")
     private String equipmentName;
+
+    private String description;
 
     @OneToMany(mappedBy = "equipment")
     private List<Workout> workouts;
