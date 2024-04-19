@@ -2,7 +2,10 @@ package com.saam3721.gymtrackerbackend.entities;
 
 import com.saam3721.gymtrackerbackend.entities.equipment.Equipment;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -10,6 +13,9 @@ import java.util.UUID;
 @Table(name = "workouts")
 @Entity
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Workout {
 
     @Id
@@ -22,7 +28,7 @@ public class Workout {
     private ApplicationUser applicationUser;
 
     @ManyToOne
-    @JoinColumn(name = "equipment_id")
+    @JoinColumn(name = "equipment_name")
     private Equipment equipment;
 
     @Column(name = "repetitions")
