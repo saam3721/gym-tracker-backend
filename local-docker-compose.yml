@@ -10,8 +10,9 @@ services:
       - postgres-db
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/local-gym-tracker
-      - SPRING_DATASOURCE_USERNAME=localpostgres
+      - SPRING_DATASOURCE_USERNAME=localuser
       - SPRING_DATASOURCE_PASSWORD=localpassword
+      - SPRING_PROFILES_ACTIVE=local
   postgres-db:
     image: postgres:alpine3.19
     environment:
