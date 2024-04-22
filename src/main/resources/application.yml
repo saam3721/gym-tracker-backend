@@ -2,5 +2,13 @@ spring:
   application:
     name: gym-tracker-backend
 
+  datasource:
+    url: jdbc:postgresql://localhost:5432/local-gym-tracker
+    username: ${POSTGRES_USERNAME}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
 jwt:
-  secret-key: ${JWT_SECRET_KEY:secret-key}
+  secret-key: ${JWT_SECRET_KEY}
